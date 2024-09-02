@@ -12,7 +12,7 @@
         "build": "tsc"
     },
     "dependencies": {
-        "quicktype-core": "file:../quicktype-core",
+        "quicktype-core": "sirrom-systems/quicktype#workspace=packages/quicktype-core&head=feature/const_generation_fix",
         "typescript": "4.9.5",
         "@mark.probst/typescript-json-schema": "0.55.0"
     },
