@@ -1,11 +1,12 @@
 {
     "name": "quicktype-core",
-    "version": "0.0.0",
+    "version": "23.0.170",
     "description": "The quicktype engine as a library",
     "license": "Apache-2.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "repository": "https://github.com/quicktype/quicktype",
+    "private": true,
     "scripts": {
         "clean": "rm -rf dist node_modules *~",
         "build": "tsc"

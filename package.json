@@ -5,6 +5,7 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "repository": "https://github.com/sirrom-systems/quicktype",
+    "private": true,
     "engines": {
         "node": ">=18.12.0"
     },
@@ -35,9 +36,9 @@
         "graphql": "^0.11.7",
         "lodash": "^4.17.21",
         "moment": "^2.30.1",
-        "@sirrom-systems/quicktype-core": "0.0.0",
-        "@sirrom-systems/quicktype-graphql-input": "0.0.0",
-        "@sirrom-systems/quicktype-typescript-input": "0.0.0",
+        "@sirrom-systems/quicktype-core": "23.0.170",
+        "@sirrom-systems/quicktype-graphql-input": "23.0.170",
+        "@sirrom-systems/quicktype-typescript-input": "23.0.170",
         "readable-stream": "^4.5.2",
         "stream-json": "1.8.0",
         "string-to-stream": "^3.0.1",

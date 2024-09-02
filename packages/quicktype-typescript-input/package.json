@@ -1,11 +1,12 @@
 {
     "name": "quicktype-typescript-input",
-    "version": "0.0.0",
+    "version": "23.0.170",
     "description": "Package for using TypeScript as an input language to quicktype",
     "license": "Apache-2.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "repository": "https://github.com/quicktype/quicktype",
+    "private": true,
     "scripts": {
         "clean": "rm -rf dist node_modules *~",
         "build": "tsc"
