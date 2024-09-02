@@ -74,8 +74,5 @@
         "ts-node": "^10.9.2",
         "watch": "^1.0.2"
     },
-    "files": [
-        "dist"
-    ],
     "bin": "dist/index.js"
 }
