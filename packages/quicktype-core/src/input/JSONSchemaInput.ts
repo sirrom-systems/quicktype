@@ -970,10 +970,9 @@ async function addTypesInSchema(
 
         const includeObject = enumArray === undefined && !isConst && (typeSet === undefined || typeSet.has("object"));
         const includeArray = enumArray === undefined && !isConst && (typeSet === undefined || typeSet.has("array"));
-        const needStringEnum =
-            includedTypes.has("string") &&
-            enumArray !== undefined &&
-            enumArray.find(x => typeof x === "string") !== undefined;
+        const enumArrayHasString =
+            enumArray !== undefined && enumArray.find((x: any) => typeof x === "string") !== undefined;
+        const needStringEnum = includedTypes.has("string") && (enumArrayHasString || isConst);
         const needUnion =
             typeSet !== undefined ||
             schema.properties !== undefined ||
@@ -1008,8 +1007,8 @@ async function addTypesInSchema(
                 combineProducedAttributes(({ forString }) => forString)
             );
 
-            if (needStringEnum || isConst) {
-                const cases = isConst ? [schema.const] : enumArray?.filter(x => typeof x === "string") ?? [];
+            if (needStringEnum) {
+                const cases = isConst ? [schema.const] : (enumArray?.filter(x => typeof x === "string") ?? []);
                 unionTypes.push(typeBuilder.getStringType(stringAttributes, StringTypes.fromCases(cases)));
             } else if (includedTypes.has("string")) {
                 unionTypes.push(makeStringType(stringAttributes));
