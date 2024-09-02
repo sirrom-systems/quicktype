@@ -76,16 +76,7 @@
         "watch": "^1.0.2"
     },
     "files": [
-        "dist/CompressedJSONFromStream.d.ts",
-        "dist/CompressedJSONFromStream.js",
-        "dist/GraphQLIntrospection.d.ts",
-        "dist/GraphQLIntrospection.js",
-        "dist/index.d.ts",
-        "dist/index.js",
-        "dist/TypeSource.d.ts",
-        "dist/TypeSource.js",
-        "dist/URLGrammar.d.ts",
-        "dist/URLGrammar.js"
+        "dist"
     ],
     "bin": "dist/index.js"
 }
