@@ -12,7 +12,7 @@
         "build": "tsc"
     },
     "dependencies": {
-        "quicktype-core": "sirrom-systems/quicktype#workspace=packages/quicktype-core&head=feature/const_generation_fix",
+        "quicktype-core": "23.0.170",
         "collection-utils": "^1.0.1",
         "graphql": "^0.11.7"
     },
