@@ -77,7 +77,8 @@
         "watch": "^1.0.2"
     },
     "files": [
-        "dist"
+        "dist",
+        "packages"
     ],
     "bin": "dist/index.js"
 }
