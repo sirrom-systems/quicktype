@@ -9,7 +9,8 @@
     "private": true,
     "scripts": {
         "clean": "rm -rf dist node_modules *~",
-        "build": "tsc"
+        "build": "tsc",
+        "prepare": "pnpm run build"
     },
     "dependencies": {
         "quicktype-core": "github:sirrom-systems/quicktype-core#main",
@@ -23,5 +24,8 @@
     },
     "files": [
         "dist"
-    ]
+    ],
+    "publishConfig": {
+        "directory": "dist"
+    }
 }

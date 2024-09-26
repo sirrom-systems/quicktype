@@ -175,6 +175,7 @@ importers:
       typescript:
         specifier: 4.9.5
         version: 4.9.5
+    publishDirectory: dist
 
   packages/quicktype-typescript-input:
     dependencies:
@@ -191,6 +192,7 @@ importers:
       '@types/node':
         specifier: 18.19.31
         version: 18.19.31
+    publishDirectory: dist
 
   packages/quicktype-vscode:
     devDependencies:
