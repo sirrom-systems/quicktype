@@ -11,17 +11,16 @@
     },
     "scripts": {
         "pub": "script/publish.sh",
-        "build": "npm run clean && npm run build --workspaces --if-present && tsc",
+        "build": "pnpm run clean && pnpm --if-present --filter=* run build && tsc",
         "test": "script/test",
         "start": "script/watch",
-        "clean": "rm -rf dist *~ packages/*/{dist,out}",
+        "clean": "rm -rf dist packages/*/{dist,out} *~",
         "debug": "node --inspect-brk --max-old-space-size=4096 ./dist/index.js",
         "lint": "eslint src/** packages/*/src/**",
         "lint:fix": "eslint --fix src/** packages/*/src/**",
-        "prepare": "npm run build"
+        "prepare": "pnpm run build"
     },
     "workspaces": [
-        "./packages/quicktype-core",
         "./packages/quicktype-graphql-input",
         "./packages/quicktype-typescript-input",
         "./packages/quicktype-vscode"
@@ -36,9 +35,9 @@
         "graphql": "^0.11.7",
         "lodash": "^4.17.21",
         "moment": "^2.30.1",
-        "quicktype-core": "sirrom-systems/quicktype#workspace=packages/quicktype-core&head=feature/const_generation_fix",
-        "quicktype-graphql-input": "sirrom-systems/quicktype#workspace=packages/quicktype-graphql-input&head=feature/const_generation_fix",
-        "quicktype-typescript-input": "sirrom-systems/quicktype#workspace=packages/quicktype-typescript-input&head=feature/const_generation_fix",
+        "quicktype-core": "github:sirrom-systems/quicktype-core#main",
+        "quicktype-graphql-input": "file:./packages/quicktype-graphql-input",
+        "quicktype-typescript-input": "file:./packages/quicktype-typescript-input",
         "readable-stream": "^4.5.2",
         "stream-json": "1.8.0",
         "string-to-stream": "^3.0.1",
@@ -51,6 +50,7 @@
         "@types/command-line-usage": "^5.0.4",
         "@types/graphql": "^0.11.7",
         "@types/lodash": "^4.17.0",
+        "@types/readable-stream": "^4.0.10",
         "@types/semver": "^7.5.0",
         "@types/shelljs": "^0.8.15",
         "@types/stream-json": "^1.7.3",
@@ -78,8 +78,7 @@
         "watch": "^1.0.2"
     },
     "files": [
-        "dist",
-        "packages"
+        "dist"
     ],
     "bin": "dist/index.js"
 }

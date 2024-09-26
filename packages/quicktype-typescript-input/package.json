@@ -12,7 +12,7 @@
         "build": "tsc"
     },
     "dependencies": {
-        "quicktype-core": "23.0.170",
+        "quicktype-core": "github:sirrom-systems/quicktype-core#main",
         "typescript": "4.9.5",
         "@mark.probst/typescript-json-schema": "0.55.0"
     },
