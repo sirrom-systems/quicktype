@@ -11,10 +11,10 @@
     },
     "scripts": {
         "pub": "script/publish.sh",
-        "build": "pnpm run clean && pnpm --if-present --filter=* run build && tsc",
+        "build": "tsc",
         "test": "script/test",
         "start": "script/watch",
-        "clean": "rm -rf dist packages/*/{dist,out} *~",
+        "clean": "rm -rf dist && pnpm run --filter=* --if-present clean",
         "debug": "node --inspect-brk --max-old-space-size=4096 ./dist/index.js",
         "lint": "eslint src/** packages/*/src/**",
         "lint:fix": "eslint --fix src/** packages/*/src/**",
