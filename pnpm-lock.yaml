@@ -4,10 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  quicktype-graphql-input: github:sirrom-systems/quicktype#path:packages/quicktype-graphql-input&feature%2Fconst_generation_fix
-  quicktype-typescript-input: github:sirrom-systems/quicktype#path:packages/quicktype-typescript-input&feature%2Fconst_generation_fix
-
 importers:
 
   .:
@@ -43,11 +39,11 @@ importers:
         specifier: github:sirrom-systems/quicktype-core#main
         version: https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b
       quicktype-graphql-input:
-        specifier: github:sirrom-systems/quicktype#path:packages/quicktype-graphql-input&feature%2Fconst_generation_fix
-        version: https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-graphql-input
+        specifier: file:./packages/quicktype-graphql-input
+        version: link:packages/quicktype-graphql-input
       quicktype-typescript-input:
-        specifier: github:sirrom-systems/quicktype#path:packages/quicktype-typescript-input&feature%2Fconst_generation_fix
-        version: https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-typescript-input
+        specifier: file:./packages/quicktype-typescript-input
+        version: link:packages/quicktype-typescript-input
       readable-stream:
         specifier: ^4.5.2
         version: 4.5.2
@@ -157,6 +153,11 @@ importers:
       watch:
         specifier: ^1.0.2
         version: 1.0.2
+    dependenciesMeta:
+      quicktype-graphql-input:
+        injected: true
+      quicktype-typescript-input:
+        injected: true
 
   packages/quicktype-graphql-input:
     dependencies:
@@ -240,8 +241,8 @@ importers:
         specifier: github:sirrom-systems/quicktype-core#main
         version: https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b
       quicktype-typescript-input:
-        specifier: github:sirrom-systems/quicktype#path:packages/quicktype-typescript-input&feature%2Fconst_generation_fix
-        version: https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-typescript-input
+        specifier: file:../quicktype-typescript-input
+        version: link:../quicktype-typescript-input
       typescript:
         specifier: ^5.3.3
         version: 5.6.2
@@ -3185,14 +3186,6 @@ packages:
 
   quicktype-core@https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b:
     resolution: {tarball: https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b}
-    version: 23.0.170
-
-  quicktype-graphql-input@https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-graphql-input:
-    resolution: {path: packages/quicktype-graphql-input, tarball: https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e}
-    version: 23.0.170
-
-  quicktype-typescript-input@https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-typescript-input:
-    resolution: {path: packages/quicktype-typescript-input, tarball: https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e}
     version: 23.0.170
 
   quote-stream@1.0.2:
@@ -7546,24 +7539,6 @@ snapshots:
       wordwrap: 1.0.0
       yaml: 2.5.1
     transitivePeerDependencies:
-      - encoding
-
-  quicktype-graphql-input@https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-graphql-input:
-    dependencies:
-      collection-utils: 1.0.1
-      graphql: 0.11.7
-      quicktype-core: https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b
-    transitivePeerDependencies:
-      - encoding
-
-  quicktype-typescript-input@https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-typescript-input:
-    dependencies:
-      '@mark.probst/typescript-json-schema': 0.55.0
-      quicktype-core: https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b
-      typescript: 4.9.5
-    transitivePeerDependencies:
-      - '@swc/core'
-      - '@swc/wasm'
       - encoding
 
   quote-stream@1.0.2:
