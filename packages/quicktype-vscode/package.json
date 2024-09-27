@@ -158,6 +158,6 @@
         "node-persist": "^4.0.1",
         "quicktype-core": "github:sirrom-systems/quicktype-core#main",
         "quicktype-typescript-input": "file:../quicktype-typescript-input",
-        "unicode-properties": "github:quicktype/unicode-properties#dist"
+        "unicode-properties": "github:glideapps/unicode-properties#dist"
     }
 }
