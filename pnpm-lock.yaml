@@ -4,6 +4,10 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  quicktype-graphql-input: github:sirrom-systems/quicktype#path:packages/quicktype-graphql-input&feature%2Fconst_generation_fix
+  quicktype-typescript-input: github:sirrom-systems/quicktype#path:packages/quicktype-typescript-input&feature%2Fconst_generation_fix
+
 importers:
 
   .:
@@ -39,11 +43,11 @@ importers:
         specifier: github:sirrom-systems/quicktype-core#main
         version: https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b
       quicktype-graphql-input:
-        specifier: file:./packages/quicktype-graphql-input
-        version: link:packages/quicktype-graphql-input
+        specifier: github:sirrom-systems/quicktype#path:packages/quicktype-graphql-input&feature%2Fconst_generation_fix
+        version: https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-graphql-input
       quicktype-typescript-input:
-        specifier: file:./packages/quicktype-typescript-input
-        version: link:packages/quicktype-typescript-input
+        specifier: github:sirrom-systems/quicktype#path:packages/quicktype-typescript-input&feature%2Fconst_generation_fix
+        version: https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-typescript-input
       readable-stream:
         specifier: ^4.5.2
         version: 4.5.2
@@ -236,8 +240,8 @@ importers:
         specifier: github:sirrom-systems/quicktype-core#main
         version: https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b
       quicktype-typescript-input:
-        specifier: file:../quicktype-typescript-input
-        version: link:../quicktype-typescript-input
+        specifier: github:sirrom-systems/quicktype#path:packages/quicktype-typescript-input&feature%2Fconst_generation_fix
+        version: https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-typescript-input
       typescript:
         specifier: ^5.3.3
         version: 5.6.2
@@ -840,8 +844,8 @@ packages:
   '@types/node-persist@3.1.8':
     resolution: {integrity: sha512-QLidg6/SadZYPrTKxtxL1A85XBoQlG40bhoMdhu6DH6+eNCMr2j+RGfFZ9I9+IY8W/PDwQonJ+iBWD62jZjMfg==}
 
-  '@types/node@16.18.111':
-    resolution: {integrity: sha512-U1l6itlxU+vrJ9KyowQLKV9X+UuQBRhBF9v/XkGhAGgNHHRWzyY7FfTYRXt3vYOXPrd8UGlbYFK5HdneKCwXPQ==}
+  '@types/node@16.18.112':
+    resolution: {integrity: sha512-EKrbKUGJROm17+dY/gMi31aJlGLJ75e1IkTojt9n6u+hnaTBDs+M1bIdOawpk2m6YUAXq/R2W0SxCng1tndHCg==}
 
   '@types/node@18.19.31':
     resolution: {integrity: sha512-ArgCD39YpyyrtFKIqMDvjz79jto5fcI/SVUs2HwB+f0dAzq68yqOdyaSivLiLugSziTpNXLQrVb7RZFmdZzbhA==}
@@ -1918,8 +1922,8 @@ packages:
     peerDependencies:
       eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0
 
-  eslint-plugin-react@7.36.1:
-    resolution: {integrity: sha512-/qwbqNXZoq+VP30s1d4Nc1C5GTxjJQjk4Jzs4Wq2qzxFM7dSmuG2UkIjg2USMLh3A/aVcUNrK7v0J5U1XEGGwA==}
+  eslint-plugin-react@7.37.0:
+    resolution: {integrity: sha512-IHBePmfWH5lKhJnJ7WB1V+v/GolbB0rjS8XYVCSQCZKaQCAUhMoVoOEn1Ef8Z8Wf0a7l8KTJvuZg5/e4qrZ6nA==}
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
@@ -3183,6 +3187,14 @@ packages:
     resolution: {tarball: https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b}
     version: 23.0.170
 
+  quicktype-graphql-input@https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-graphql-input:
+    resolution: {path: packages/quicktype-graphql-input, tarball: https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e}
+    version: 23.0.170
+
+  quicktype-typescript-input@https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-typescript-input:
+    resolution: {path: packages/quicktype-typescript-input, tarball: https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e}
+    version: 23.0.170
+
   quote-stream@1.0.2:
     resolution: {integrity: sha512-kKr2uQ2AokadPjvTyKJQad9xELbZwYzWlNfI3Uz2j/ib5u6H9lDP7fUUR//rMycd0gv4Z5P1qXMfXR8YpIxrjQ==}
     hasBin: true
@@ -3760,8 +3772,8 @@ packages:
     resolution: {integrity: sha512-6bc58dPYhCMHHuwxldQxO3RRNZ4eCogZ/st++0+fcC1nr0jiGUtAdBJ2qzmLQWSxbtz42pWt4QQMiZ9HvZf5cg==}
     engines: {node: '>=0.10.0'}
 
-  update-browserslist-db@1.1.0:
-    resolution: {integrity: sha512-EdRAaAyk2cUE1wOf2DkEhzxqOQvFOoRJFNS6NeyJ01Gp2beMRpBAINjM2iDXE3KCuKhwnvHIQCJm6ThL2Z+HzQ==}
+  update-browserslist-db@1.1.1:
+    resolution: {integrity: sha512-R8UzCaa9Az+38REPiJ1tXlImTJXlVfgHZsglwBD/k6nj76ctsH1E3q4doGrukiLQd3sGQYu56r5+lo5r94l29A==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -4598,11 +4610,11 @@ snapshots:
   '@mark.probst/typescript-json-schema@0.55.0':
     dependencies:
       '@types/json-schema': 7.0.15
-      '@types/node': 16.18.111
+      '@types/node': 16.18.112
       glob: 7.2.3
       path-equal: 1.2.5
       safe-stable-stringify: 2.5.0
-      ts-node: 10.9.2(@types/node@16.18.111)(typescript@4.9.4)
+      ts-node: 10.9.2(@types/node@16.18.112)(typescript@4.9.4)
       typescript: 4.9.4
       yargs: 17.7.2
     transitivePeerDependencies:
@@ -4699,7 +4711,7 @@ snapshots:
     dependencies:
       '@types/node': 18.19.31
 
-  '@types/node@16.18.111': {}
+  '@types/node@16.18.112': {}
 
   '@types/node@18.19.31':
     dependencies:
@@ -5311,7 +5323,7 @@ snapshots:
       caniuse-lite: 1.0.30001664
       electron-to-chromium: 1.5.29
       node-releases: 2.0.18
-      update-browserslist-db: 1.1.0(browserslist@4.24.0)
+      update-browserslist-db: 1.1.1(browserslist@4.24.0)
 
   buffer-crc32@0.2.13: {}
 
@@ -5898,7 +5910,7 @@ snapshots:
       eslint-plugin-node: 11.1.0(eslint@8.57.1)
       eslint-plugin-prettier: 5.2.1(eslint-config-prettier@9.1.0(eslint@8.57.1))(eslint@8.57.1)(prettier@3.3.3)
       eslint-plugin-promise: 6.6.0(eslint@8.57.1)
-      eslint-plugin-react: 7.36.1(eslint@8.57.1)
+      eslint-plugin-react: 7.37.0(eslint@8.57.1)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.1)
       eslint-plugin-regexp: 1.15.0(eslint@8.57.1)
       eslint-plugin-simple-import-sort: 10.0.0(eslint@8.57.1)
@@ -6200,7 +6212,7 @@ snapshots:
     dependencies:
       eslint: 8.57.1
 
-  eslint-plugin-react@7.36.1(eslint@8.57.1):
+  eslint-plugin-react@7.37.0(eslint@8.57.1):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlast: 1.2.5
@@ -7536,6 +7548,24 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
+  quicktype-graphql-input@https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-graphql-input:
+    dependencies:
+      collection-utils: 1.0.1
+      graphql: 0.11.7
+      quicktype-core: https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b
+    transitivePeerDependencies:
+      - encoding
+
+  quicktype-typescript-input@https://codeload.github.com/sirrom-systems/quicktype/tar.gz/764ea065460043afdc723941306cad0cd7707f4e#path:packages/quicktype-typescript-input:
+    dependencies:
+      '@mark.probst/typescript-json-schema': 0.55.0
+      quicktype-core: https://codeload.github.com/sirrom-systems/quicktype-core/tar.gz/535f2080fdf2b70159cfdd19a3326ecec282b88b
+      typescript: 4.9.5
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - encoding
+
   quote-stream@1.0.2:
     dependencies:
       buffer-equal: 0.0.1
@@ -8039,14 +8069,14 @@ snapshots:
     dependencies:
       typescript: 5.6.2
 
-  ts-node@10.9.2(@types/node@16.18.111)(typescript@4.9.4):
+  ts-node@10.9.2(@types/node@16.18.112)(typescript@4.9.4):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.11
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 16.18.111
+      '@types/node': 16.18.112
       acorn: 8.12.1
       acorn-walk: 8.3.4
       arg: 4.1.3
@@ -8207,7 +8237,7 @@ snapshots:
     dependencies:
       normalize-path: 2.1.1
 
-  update-browserslist-db@1.1.0(browserslist@4.24.0):
+  update-browserslist-db@1.1.1(browserslist@4.24.0):
     dependencies:
       browserslist: 4.24.0
       escalade: 3.2.0

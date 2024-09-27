@@ -44,6 +44,12 @@
         "typescript": "4.9.5",
         "wordwrap": "^1.0.0"
     },
+    "pnpm": {
+        "overrides": {
+            "quicktype-graphql-input": "github:sirrom-systems/quicktype#path:packages/quicktype-graphql-input&feature%2Fconst_generation_fix",
+            "quicktype-typescript-input": "github:sirrom-systems/quicktype#path:packages/quicktype-typescript-input&feature%2Fconst_generation_fix"
+        }
+    },
     "devDependencies": {
         "@tsconfig/node18": "^1.0.1",
         "@types/command-line-args": "^5.2.0",
